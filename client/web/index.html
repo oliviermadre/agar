@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Eat cells smaller than you and don&#39;t get eaten by the bigger ones, as an MMO">
+<meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun, flash">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta property="fb:app_id" content="677505792353827">
+<meta property="og:title" content="Agar.io">
+<meta property="og:description" content="Eat cells smaller than you and don&#39;t get eaten by the bigger ones, as an MMO">
+<meta property="og:url" content="http://agar.io">
+<meta property="og:image" content="http://agar.io/img/1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<title>Agar.io</title>
+<link id="favicon" rel="icon" type="image/png" href="http://agar.io/favicon-32x32.png">
+
+
+
+<link href="./inc/css" rel="stylesheet" type="text/css">
+<link href="http://agar.io/css/bootstrap.min.css" rel="stylesheet">
+<script src="./inc/jquery.js"></script>
+
+<script src="./inc/main_out.js"></script>
+
+
+<style>body{padding:0;margin:0;overflow:hidden;}#canvas{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;}.checkbox label{margin-right:10px;}form{margin-bottom:0px;}.btn-play,.btn-settings,.btn-spectate{display:block;height:35px;}.btn-play{width:85%;float:left;}.btn-settings{width:13%;float:right;}.btn-spectate{display:block;float:right;}#adsBottom{position:absolute;left:0;right:0;bottom:0;}#adsBottomInner{margin:0px auto;width:728px;height:90px;border:5px solid white;border-radius:5px 5px 0px 0px;background-color:#FFFFFF;box-sizing:content-box;}.region-message{display:none;margin-bottom:12px;margin-left:6px;margin-right:6px;text-align:center;}#nick,#locationKnown #region{width:65%;float:left;}#locationUnknown #region{margin-bottom:15px;}#gamemode,#spectateBtn{width:33%;float:right;}#helloDialog{width:350px;background-color:#FFFFFF;margin:10px auto;border-radius:15px;padding:5px 15px 5px 15px;position:absolute;top:50%;left:50%;margin-right:-50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}#a300x250{width:300px;height:250px;background-repeat:no-repeat;background-size:contain;background-position:center center;}</style>
+<script type="text/javascript" src="./inc/osd.js"></script><script type="text/javascript" src="./inc/alestetkr.js"></script><script type="text/javascript" src="./inc/aleaskw.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div>
+
+
+</div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+
+<script src="./inc/advertisement.js"></script><div id="tester" style="display:none">Advertisement</div>
+<div id="overlays" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 200; background-color: rgba(0, 0, 0, 0.498039);">
+<div id="helloDialog" style="transform: translate(-50%, -50%) scale(0.74392177589852);">
+<form role="form">
+<div class="form-group">
+<div style="float: left; margin-left: 20px;"><h2>Agar.io</h2></div>
+
+<br clear="both">
+</div>
+<div class="form-group">
+<input id="nick" class="form-control" placeholder="Nick" maxlength="15">
+<select id="gamemode" class="form-control" onchange="setGameMode($(this).val());" required="">
+<option selected="" value="">FFA</option>
+<option value=":teams">Teams</option>
+<option value=":experimental">Experimental</option>
+</select>
+<br clear="both">
+</div>
+<div id="locationUnknown">
+
+<select id="region" class="form-control" onchange="setRegion($(&#39;#region&#39;).val());" required="">
+<option selected="" disabled="" value=""> -- Select a Region -- </option>
+<option value="US-Atlanta">North America (33627 players)</option>
+<option value="BR-Brazil">South America (23467 players)</option>
+<option value="EU-London">Europe (33461 players)</option>
+<option value="RU-Russia">Russia (5675 players)</option>
+<option value="TK-Turkey">Turkey (7442 players)</option>
+<option value="JP-Tokyo">East Asia (2554 players)</option>
+<option value="CN-China">China (2607 players)</option>
+<option value="SG-Singapore">Oceania (3174 players)</option>
+</select></div>
+<div>
+<div class="text-muted region-message CN-China" style="display: none;">
+
+</div>
+</div>
+<div class="form-group">
+<button type="submit" id="playBtn" onclick="setNick(document.getElementById(&#39;nick&#39;).value); return false;" class="btn btn-play btn-primary btn-needs-server">Play</button>
+<button onclick="$(&#39;#settings, #instructions&#39;).toggle();return false;" class="btn btn-info btn-settings"><i class="glyphicon glyphicon-cog"></i></button>
+<br clear="both">
+</div>
+<div id="settings" class="checkbox" style="display:none;">
+<div class="form-group">
+<div id="locationKnown"></div>
+<button id="spectateBtn" onclick="spectate(); return false;" class="btn btn-warning btn-spectate btn-needs-server">Spectate</button>
+<br clear="both">
+</div>
+<div style="margin: 6px;">
+<label><input type="checkbox" onchange="setSkins(!$(this).is(&#39;:checked&#39;));"> No skins</label>
+<label><input type="checkbox" onchange="setNames(!$(this).is(&#39;:checked&#39;));"> No names</label>
+<label><input type="checkbox" onchange="setDarkTheme($(this).is(&#39;:checked&#39;));"> Dark Theme</label>
+<label><input type="checkbox" onchange="setColors($(this).is(&#39;:checked&#39;));"> No colors</label>
+<label><input type="checkbox" onchange="setShowMass($(this).is(&#39;:checked&#39;));"> Show mass</label>
+</div>
+</div>
+</form>
+<div id="instructions">
+<hr>
+<center><span class="text-muted">
+Move your mouse to control your cell<br>
+Press <b>Space</b> to split<br>
+Press <b>W</b> to eject some mass<br>
+</span></center>
+</div>
+<hr>
+<center>
+
+<small class="text-muted text-center">Advertisement</small>
+</center>
+<hr style="margin-bottom: 7px; ">
+<div style="margin-bottom: 5px; line-height: 32px; margin-left: 6px; height: 32px;">
+<center>
+<a href="http://agar.io/privacy.txt" class="text-muted">Privacy</a>
+|
+<a href="http://agar.io/terms.txt" class="text-muted">Terms of Service</a>
+|
+<a href="http://agar.io/changelog.txt" class="text-muted">Changelog</a>
+</center>
+</div>
+
+</div>
+</div>
+<div id="connecting" style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 100; display: none; background-color: rgba(0, 0, 0, 0.498039);">
+<div style="width: 350px; background-color: #FFFFFF; margin: 100px auto; border-radius: 15px; padding: 5px 15px 5px 15px;">
+<h2>Connecting</h2>
+<p> If you cannot connect to the servers, check if you have some anti virus or firewall blocking the connection.
+</p></div>
+</div>
+<script>
+$(document).ready(function() {
+    connect('ws://' + window.location.hostname + ':443');
+});
+
+</script>
+<canvas id="canvas" width="1920" height="563"></canvas>
+<div style="font-family:&#39;Ubuntu&#39;">&nbsp;</div>

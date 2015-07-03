@@ -1,0 +1,14 @@
+server:
+    image: agario
+    volumes:
+        - "./server/gameserver.ini:/Ogar/gameserver.ini"
+    ports:
+        - "443:443"
+client:
+    image: nginx
+    ports:
+        - "80:80"
+    volumes:
+        - "./client/cfg/nginx.conf:/etc/nginx/conf.d/agar.conf"
+        - "./client/log:/var/log/nginx"
+        - "./client/web:/var/www/html"
