@@ -38,7 +38,7 @@ make run
 
 The client will be available on the host IP, port 80 (you can configure this in the docker-compose).
 
-The server will be available on the host IP, port 443 (you can configur this in the docker-compose + gameserver.ini).
+The server will be available on the host IP, port 443 (you can configure this in the docker-compose + gameserver.ini + client/web/index.html (at the bottom of the file, the port is hardcoded atm).
 
 When you connect to the client with your browser, you'll be automatically connected to the server, just fill the username and press the play button !
 
